@@ -120,7 +120,7 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
     };
 
     var addImageForPreload = function(url) {
-        var image = $("<img />").attr("src", url).bind("load", function () {
+        var image = $("<img />").attr("src", url).bind("load error", function () {
             completeImageLoading();
         }).appendTo(qLimageContainer);
     };
